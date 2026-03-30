@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 Prompts de ChatGPT para Emprendedores</title>
+    <meta name="description" content="100 prompts listos para copiar, pegar y hacer crecer tu negocio con inteligencia artificial.">
+    <meta property="og:title" content="100 Prompts de ChatGPT para Emprendedores">
+    <meta property="og:description" content="Ahorra tiempo, vende más y escala tu negocio con IA. 100 prompts listos para usar.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #1A1A2E;
+            --accent: #E94560;
+            --accent-hover: #d63a54;
+            --purple: #667EEA;
+            --dark: #0F0F1A;
+            --text: #333;
+            --text-light: #666;
+            --bg: #FAFBFF;
+            --card: #FFFFFF;
+            --border: #E8ECF4;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #1A1A2E 0%, #16213E 40%, #0F3460 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 1rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(233,69,96,0.15) 0%, transparent 70%);
+            top: -100px; right: -100px;
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(102,126,234,0.12) 0%, transparent 70%);
+            bottom: -50px; left: -50px;
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 720px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(233,69,96,0.15);
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(233,69,96,0.3);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 3.5rem);
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--accent), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 540px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-price {
+            margin-bottom: 2rem;
+        }
+
+        .price-old {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.4);
+            text-decoration: line-through;
+            margin-right: 0.5rem;
+        }
+
+        .price-new {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        .price-new sup {
+            font-size: 1.2rem;
+            top: -1rem;
+        }
+
+        .price-tag {
+            display: block;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 0.3rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 25px rgba(233,69,96,0.4);
+            letter-spacing: 0.3px;
+        }
+
+        .cta-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 35px rgba(233,69,96,0.5);
+        }
+
+        .hero-guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.2rem;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* SOCIAL PROOF BAR */
+        .social-proof {
+            background: var(--primary);
+            padding: 1.2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .social-proof p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .social-proof strong {
+            color: var(--accent);
+        }
+
+        /* SECTIONS */
+        section { padding: 5rem 1.5rem; }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 600px;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+        }
+
+        /* WHAT YOU GET */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            border-color: rgba(233,69,96,0.2);
+        }
+
+        .feature-icon {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, rgba(233,69,96,0.1), rgba(102,126,234,0.1));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* CATEGORIES */
+        .categories-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+
+        .category-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .category-item:hover {
+            border-color: var(--accent);
+            background: #FFF5F7;
+        }
+
+        .category-num {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--accent);
+            opacity: 0.6;
+            min-width: 32px;
+        }
+
+        .category-info h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .category-info span {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* WHO IS THIS FOR */
+        .for-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .for-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .for-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .for-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .for-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials-section {
+            background: linear-gradient(135deg, #1A1A2E, #16213E);
+        }
+
+        .testimonials-section .section-label { color: var(--accent); }
+        .testimonials-section .section-title { color: #fff; }
+        .testimonials-section .section-subtitle { color: rgba(255,255,255,0.6); }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .stars { color: #FFC107; font-size: 1rem; margin-bottom: 1rem; }
+
+        .testimonial-card p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            font-weight: 600;
+        }
+
+        /* PRICING CTA */
+        .pricing-section {
+            background: var(--bg);
+            text-align: center;
+        }
+
+        .pricing-box {
+            max-width: 480px;
+            margin: 0 auto;
+            background: var(--card);
+            border: 2px solid var(--accent);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(233,69,96,0.12);
+        }
+
+        .pricing-popular {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.4rem 1.5rem;
+            border-radius: 50px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .pricing-box h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-box .price-section {
+            margin: 1.5rem 0;
+        }
+
+        .pricing-box .price-old {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .pricing-box .price-new {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--primary);
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        .pricing-features li {
+            padding: 0.6rem 0;
+            font-size: 0.95rem;
+            color: var(--text);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .pricing-features li:last-child { border: none; }
+
+        .check {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .pricing-box .cta-btn {
+            width: 100%;
+            text-align: center;
+            padding: 1.1rem;
+            font-size: 1.15rem;
+            margin-top: 0.5rem;
+        }
+
+        .pricing-note {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 0;
+        }
+
+        .faq-item summary {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: 300;
+            transition: transform 0.2s;
+        }
+
+        .faq-item[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-item p {
+            margin-top: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #1A1A2E 0%, #0F3460 100%);
+            text-align: center;
+            padding: 5rem 1.5rem;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .cta-btn {
+            font-size: 1.15rem;
+            padding: 1.1rem 3rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.3);
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-content > * {
+            animation: fadeUp 0.6s ease-out both;
+        }
+
+        .hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+        .hero-content > *:nth-child(2) { animation-delay: 0.2s; }
+        .hero-content > *:nth-child(3) { animation-delay: 0.3s; }
+        .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+        .hero-content > *:nth-child(5) { animation-delay: 0.5s; }
+        .hero-content > *:nth-child(6) { animation-delay: 0.6s; }
+
+        /* RESPONSIVE */
+        @media (max-width: 640px) {
+            section { padding: 3.5rem 1rem; }
+            .pricing-box { padding: 2rem 1.5rem; }
+            .feature-card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="badge">Guia Definitiva 2026</div>
+        <h1>100 Prompts de ChatGPT<br>para <span>Emprendedores</span></h1>
+        <p>Ahorra tiempo, vende mas y escala tu negocio con inteligencia artificial. Prompts listos para copiar, pegar y obtener resultados inmediatos.</p>
+        <div class="hero-price">
+            <span class="price-old">$199 MXN</span>
+            <span class="price-new"><sup>$</sup>99<sup>MXN</sup></span>
+            <span class="price-tag">Precio de lanzamiento por tiempo limitado</span>
+        </div>
+        <!-- AQUI VA TU LINK DE MERCADO PAGO -->
+        <a href="https://mpago.li/125rpbb" class="cta-btn" id="cta-hero">Quiero mis 100 Prompts</a>
+        <div class="hero-guarantee">
+            <span>&#9679;</span> Descarga inmediata &nbsp; <span>&#9679;</span> PDF listo para usar &nbsp; <span>&#9679;</span> Pago seguro
+        </div>
+    </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<div class="social-proof">
+    <p>Mas de <strong>100 emprendedores</strong> ya usan estos prompts para hacer crecer su negocio</p>
+</div>
+
+<!-- QUE OBTIENES -->
+<section id="contenido">
+    <div class="container">
+        <span class="section-label">Lo que obtienes</span>
+        <h2 class="section-title">Todo lo que necesitas para dominar ChatGPT en tu negocio</h2>
+        <p class="section-subtitle">No es otro ebook generico. Son 100 prompts probados, organizados por area, listos para que los copies y los uses hoy mismo.</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">&#9889;</div>
+                <h3>100 Prompts Listos</h3>
+                <p>Solo copia, personaliza con tu nicho y pega en ChatGPT. Resultados en segundos, no en horas.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#128218;</div>
+                <h3>10 Categorias</h3>
+                <p>Marketing, ventas, finanzas, productividad, branding y mas. Cubre todas las areas de tu negocio.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#127919;</div>
+                <h3>Tips en Cada Prompt</h3>
+                <p>Cada prompt incluye un tip profesional para que obtengas la mejor respuesta posible de la IA.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#127873;</div>
+                <h3>Bonus: Guia de Personalizacion</h3>
+                <p>Aprende a modificar los prompts para que se adapten perfectamente a tu negocio especifico.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#128260;</div>
+                <h3>Actualizaciones Incluidas</h3>
+                <p>Funciona con ChatGPT, Claude, Gemini y cualquier IA conversacional actual y futura.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#128241;</div>
+                <h3>PDF Descargable</h3>
+                <p>Lee desde tu celular, tablet o computadora. Sin apps, sin suscripciones, sin complicaciones.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CATEGORIAS -->
+<section style="background: #F0F4FF;">
+    <div class="container">
+        <span class="section-label">10 Secciones</span>
+        <h2 class="section-title">Prompts para cada area de tu negocio</h2>
+        <p class="section-subtitle">Desde conseguir clientes hasta manejar tus finanzas. Todo cubierto.</p>
+
+        <div class="categories-list">
+            <div class="category-item">
+                <span class="category-num">01</span>
+                <div class="category-info">
+                    <h4>Marketing y Redes Sociales</h4>
+                    <span>15 prompts</span>
+                </div>
+            </div>
+            <div class="category-item">
+                <span class="category-num">02</span>
+                <div class="category-info">
+                    <h4>Ventas y Copywriting</h4>
+                    <span>15 prompts</span>
+                </div>
+            </div>
+            <div class="category-item">
+                <span class="category-num">03</span>
+                <div class="category-info">
+                    <h4>Estrategia de Negocio</h4>
+                    <span>10 prompts</span>
+                </div>
+            </div>
+            <div class="category-item">
+                <span class="category-num">04</span>
+                <div class="category-info">
+                    <h4>Finanzas y Contabilidad</h4>
+                    <span>10 prompts</span>
+                </div>
+            </div>
+            <div class="category-item">
+                <span class="category-num">05</span>
+                <div class="category-info">
+                    <h4>Productividad</h4>
+                    <span>10 prompts</span>
+                </div>
+            </div>
+            <div class="category-item">
+                <span class="category-num">06</span>
+                <div class="category-info">
+                    <h4>Atencion al Cliente</h4>
+                    <span>10 prompts</span>
+                </div>
+            </div>
+            <div class="category-item">
+                <span class="category-num">07</span>
+                <div class="category-info">
+                    <h4>Creacion de Contenido</h4>
+                    <span>10 prompts</span>
+                </div>
+            </div>
+            <div class="category-item">
+                <span class="category-num">08</span>
+                <div class="category-info">
+                    <h4>Email Marketing</h4>
+                    <span>10 prompts</span>
+                </div>
+            </div>
+            <div class="category-item">
+                <span class="category-num">09</span>
+                <div class="category-info">
+                    <h4>Branding e Identidad</h4>
+                    <span>5 prompts</span>
+                </div>
+            </div>
+            <div class="category-item">
+                <span class="category-num">10</span>
+                <div class="category-info">
+                    <h4>Recursos Humanos</h4>
+                    <span>5 prompts</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PARA QUIEN -->
+<section>
+    <div class="container">
+        <span class="section-label">Para quien es</span>
+        <h2 class="section-title">Este ebook es para ti si...</h2>
+        <p class="section-subtitle">No importa tu nivel de experiencia con IA. Si tienes un negocio, esto te va a servir.</p>
+
+        <div class="for-grid">
+            <div class="for-card">
+                <div class="for-icon">&#128640;</div>
+                <h3>Emprendedores que inician</h3>
+                <p>Necesitas hacer todo tu solo y no tienes tiempo. ChatGPT con los prompts correctos es como tener un equipo de 10 personas.</p>
+            </div>
+            <div class="for-card">
+                <div class="for-icon">&#128188;</div>
+                <h3>Duenos de negocio</h3>
+                <p>Ya vendes pero quieres escalar. Estos prompts te ayudan a sistematizar marketing, ventas y operaciones.</p>
+            </div>
+            <div class="for-card">
+                <div class="for-icon">&#128187;</div>
+                <h3>Freelancers y consultores</h3>
+                <p>Crea propuestas, contenido y estrategias para tus clientes en minutos en lugar de horas.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testimonials-section">
+    <div class="container">
+        <span class="section-label">Resultados reales</span>
+        <h2 class="section-title">Lo que dicen quienes ya lo usan</h2>
+        <p class="section-subtitle">Emprendedores como tu que estan ahorrando tiempo y vendiendo mas.</p>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"Antes me tardaba 3 horas pensando que publicar en redes. Con estos prompts, en 20 minutos tengo el contenido de toda la semana."</p>
+                <span class="testimonial-author">- Maria G., tienda de ropa online</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"El prompt de pagina de ventas me ayudo a escribir un copy que triplico mis conversiones. Vale cada peso invertido."</p>
+                <span class="testimonial-author">- Carlos R., coach de fitness</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"Lo mejor es que no necesitas saber nada de IA. Solo copias, pegas, y ChatGPT hace la magia. Muy practico."</p>
+                <span class="testimonial-author">- Ana L., cafeteria artesanal</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="comprar">
+    <div class="container">
+        <span class="section-label">Oferta de lanzamiento</span>
+        <h2 class="section-title">Invierte en tu negocio hoy</h2>
+        <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Por menos de lo que cuesta un cafe, obtendras herramientas que otros cobran miles de pesos en cursos.</p>
+
+        <div class="pricing-box">
+            <div class="pricing-popular">Mas vendido</div>
+            <h3>100 Prompts de ChatGPT para Emprendedores</h3>
+            <div class="price-section">
+                <span class="price-old">$199 MXN</span><br>
+                <span class="price-new"><sup>$</sup>99<sup>MXN</sup></span>
+            </div>
+
+            <ul class="pricing-features">
+                <li><span class="check">&#10003;</span> 100 prompts listos para copiar y usar</li>
+                <li><span class="check">&#10003;</span> 10 categorias que cubren todo tu negocio</li>
+                <li><span class="check">&#10003;</span> Tips profesionales en cada prompt</li>
+                <li><span class="check">&#10003;</span> Bonus: Guia de personalizacion</li>
+                <li><span class="check">&#10003;</span> PDF descargable al instante</li>
+                <li><span class="check">&#10003;</span> Compatible con ChatGPT, Claude, Gemini</li>
+                <li><span class="check">&#10003;</span> Acceso de por vida + actualizaciones</li>
+            </ul>
+
+            <!-- AQUI VA TU LINK DE MERCADO PAGO -->
+            <a href="https://mpago.li/125rpbb" class="cta-btn" id="cta-pricing">Comprar Ahora - $99 MXN</a>
+            <p class="pricing-note">Pago seguro con Mercado Pago. Descarga inmediata.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section>
+    <div class="container">
+        <span class="section-label">Preguntas frecuentes</span>
+        <h2 class="section-title">Resolvemos tus dudas</h2>
+        <p class="section-subtitle">Si tienes otra pregunta, escribenos por mensaje directo.</p>
+
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>Como recibo el ebook?</summary>
+                <p>Inmediatamente despues de tu pago en Mercado Pago, recibiras un enlace para descargar el PDF. Lo puedes abrir en cualquier dispositivo.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Necesito saber de inteligencia artificial?</summary>
+                <p>No. Los prompts estan disenados para que solo copies, personalices con tu informacion y pegues en ChatGPT. Cero experiencia necesaria.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Funciona para cualquier tipo de negocio?</summary>
+                <p>Si. Los prompts cubren areas universales: marketing, ventas, finanzas, productividad, etc. Solo reemplaza [tu nicho] con tu industria y listo.</p>
+            </details>
+            <details class="faq-item">
+                <summary>ChatGPT es gratis?</summary>
+                <p>Si, ChatGPT tiene una version gratuita que funciona perfecto con estos prompts. No necesitas la version de pago.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Solo funciona con ChatGPT?</summary>
+                <p>No. Los prompts funcionan con cualquier IA conversacional: ChatGPT, Claude, Gemini, Copilot, y mas.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Puedo pedir factura?</summary>
+                <p>Si, escribenos despues de tu compra con tus datos fiscales y te generamos tu factura (CFDI).</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+    <h2>Deja de perder horas.<br>Empieza a usar IA a tu favor.</h2>
+    <p>100 prompts. 10 areas de tu negocio. 1 inversion que se paga sola.</p>
+    <!-- AQUI VA TU LINK DE MERCADO PAGO -->
+    <a href="https://mpago.li/125rpbb" class="cta-btn" id="cta-final">Quiero mis 100 Prompts - $99 MXN</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 - 100 Prompts de ChatGPT para Emprendedores. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
